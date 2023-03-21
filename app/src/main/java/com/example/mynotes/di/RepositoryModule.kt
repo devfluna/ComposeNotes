@@ -1,9 +1,7 @@
 package com.example.mynotes.di
 
-import androidx.lifecycle.ViewModel
 import com.example.mynotes.data.repositories.MyRepo
 import com.example.mynotes.data.repositories.MyRepoImpl
-import com.example.mynotes.ui.viewmodel.MyViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

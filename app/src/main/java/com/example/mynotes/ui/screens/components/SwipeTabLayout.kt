@@ -14,13 +14,13 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mynotes.ui.screens.NotesScreen
 import com.example.mynotes.ui.screens.RemindersScreen
 import com.example.mynotes.ui.theme.MyNotesTheme
-import com.example.mynotes.ui.viewmodel.MyViewModel
+import com.example.mynotes.ui.viewmodel.MainViewModel
 import com.google.accompanist.pager.*
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun SwipeTabLayout(viewModel: MyViewModel = hiltViewModel()) {
+fun SwipeTabLayout(viewModel: MainViewModel = hiltViewModel()) {
     val pagerState = rememberPagerState(pageCount = 2)
 
     Column(modifier = Modifier.background(MaterialTheme.colors.background)) {

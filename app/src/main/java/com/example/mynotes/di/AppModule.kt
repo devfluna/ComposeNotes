@@ -1,7 +1,7 @@
 package com.example.mynotes.di
 
 import com.example.mynotes.data.repositories.MyRepo
-import com.example.mynotes.ui.viewmodel.MyViewModel
+import com.example.mynotes.ui.viewmodel.MainViewModel
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,8 +14,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providesViewModel(repo: MyRepo): MyViewModel {
-        return MyViewModel(repo)
+    fun providesViewModel(repo: MyRepo): MainViewModel {
+        return MainViewModel(repo)
     }
 
 }

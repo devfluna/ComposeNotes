@@ -8,10 +8,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mynotes.ui.screens.components.SwipeTabLayout
-import com.example.mynotes.ui.viewmodel.MyViewModel
+import com.example.mynotes.ui.viewmodel.MainViewModel
 
 @Composable
-fun MainScreen(viewModel: MyViewModel = hiltViewModel()) {
+fun MainScreen(viewModel: MainViewModel = hiltViewModel()) {
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colors.background
