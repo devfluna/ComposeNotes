@@ -43,7 +43,7 @@ fun MyNotesTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composabl
 private val DarkThemeColors = darkColors(
     primary = BluePrimaryDark, primaryVariant = BluePrimary, secondary = CyanSecondary,
     background = Color.Black,
-    surface = SurfaceDark,
+    surface = Color.Black,
     onPrimary = Color.White,
     onSecondary = Color.White,
     onBackground = Color.White,
@@ -53,7 +53,7 @@ private val DarkThemeColors = darkColors(
 private val LightThemeColors = lightColors(
     primary = BluePrimary, primaryVariant = BluePrimaryDark, secondary = CyanSecondary,
     background = Color.White,
-    surface = SurfaceLight,
+    surface = Color.White,
     onPrimary = Color.White,
     onSecondary = Color.Black,
     onBackground = Color.Black,

@@ -35,7 +35,8 @@ fun NewNoteDialog(shouldShow: Boolean, onDismiss: () -> Unit) {
             Surface(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .wrapContentHeight()
+                    .wrapContentHeight(),
+                elevation = 4.dp
             ) {
                 Column(
                     modifier = Modifier.padding(16.dp),
@@ -43,7 +44,7 @@ fun NewNoteDialog(shouldShow: Boolean, onDismiss: () -> Unit) {
                 ) {
                     var text by remember { mutableStateOf("") }
                     var content by remember { mutableStateOf("") }
-                    
+
                     TextField(
                         modifier = Modifier.fillMaxWidth(),
                         value = text,
@@ -62,9 +63,11 @@ fun NewNoteDialog(shouldShow: Boolean, onDismiss: () -> Unit) {
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    Row(modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End,
-                    verticalAlignment = Alignment.CenterVertically) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
 
                         Button(onClick = onDismiss) {
                             Text(text = "OK")
