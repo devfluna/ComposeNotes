@@ -6,6 +6,7 @@ This app is being developed to put into practice Jetpack Compose and Dependency 
 
 ## Build Using
 * For the UI: Jetpack Compose
+* Navigation: Navigation Compose
 * Dependency Injection: Dagger-Hilt
 * Arch Patterns: MVVM
 * App layers: data, ui
