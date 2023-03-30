@@ -27,12 +27,12 @@ fun SwipeTabLayout(viewModel: MainViewModel = hiltViewModel()) {
 
         SwipeTab(
             pagerState = pagerState,
-            onTabClick = { viewModel.setScreenFromPagerState(it) }
+            onTabClick = viewModel::setScreenFromPagerState
         )
 
         TabContent(
             pagerState = pagerState,
-            onTabSwipe = { viewModel.setScreenFromPagerState(it) }
+            onTabSwipe = viewModel::setScreenFromPagerState
         )
     }
 }
