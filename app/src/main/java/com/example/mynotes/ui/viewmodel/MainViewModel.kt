@@ -1,6 +1,5 @@
 package com.example.mynotes.ui.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.mynotes.data.repositories.MyRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -25,7 +24,6 @@ class MainViewModel @Inject constructor(
 
     fun setScreenFromPagerState(currentPage: Int) {
         this.selectedTab = currentPage
-        Log.v("TEST", "State is: $currentPage")
     }
 
     fun setDialogState(state: Boolean) {

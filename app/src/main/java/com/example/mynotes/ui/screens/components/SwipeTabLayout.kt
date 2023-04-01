@@ -20,19 +20,19 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun SwipeTabLayout(viewModel: MainViewModel = hiltViewModel()) {
+fun SwipeTabLayout(onSwipeOrClicked: (Int) -> Unit) {
     val pagerState = rememberPagerState(pageCount = 2)
 
     Column(modifier = Modifier.background(MaterialTheme.colors.background)) {
 
         SwipeTab(
             pagerState = pagerState,
-            onTabClick = viewModel::setScreenFromPagerState
+            onTabClick = onSwipeOrClicked
         )
 
         TabContent(
             pagerState = pagerState,
-            onTabSwipe = viewModel::setScreenFromPagerState
+            onTabSwipe = onSwipeOrClicked
         )
     }
 }

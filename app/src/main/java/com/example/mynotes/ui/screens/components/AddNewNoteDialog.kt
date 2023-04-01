@@ -33,10 +33,10 @@ fun NewNoteDialog(shouldShow: Boolean, onDismiss: () -> Unit) {
     if (shouldShow) {
         Dialog(onDismissRequest = onDismiss) {
             Surface(
+                elevation = 4.dp,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .wrapContentHeight(),
-                elevation = 4.dp
+                    .wrapContentHeight()
             ) {
                 Column(
                     modifier = Modifier.padding(16.dp),
