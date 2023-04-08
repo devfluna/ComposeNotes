@@ -10,11 +10,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.mynotes.ui.screens.NotesScreen
 import com.example.mynotes.ui.screens.RemindersScreen
 import com.example.mynotes.ui.theme.MyNotesTheme
-import com.example.mynotes.ui.viewmodel.MainViewModel
 import com.google.accompanist.pager.*
 import kotlinx.coroutines.launch
 

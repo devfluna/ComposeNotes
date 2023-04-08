@@ -21,9 +21,9 @@ fun NotesScreen() {
             .fillMaxSize()
             .background(MaterialTheme.colors.surface)
     ) {
-        
+
         LazyColumn(contentPadding = PaddingValues(vertical = 16.dp)) {
-            items(12){ index ->
+            items(12) { index ->
                 NotesCard()
             }
         }
