@@ -1,0 +1,35 @@
+@startuml
+title Navigation: With callbacks to the children (Agreed)
+
+class NavigationGraph {
+'Will a get throught the lambda and use it to navigate to the next screen
++ onNavigationRequest( route: (String) -> Unit) )
+}
+
+class MainScreen{
++ constructor(navigate: (String) -> Unit ))
+}
+
+
+class TabLayout{
++ constructor(navigate: (String) -> Unit ))
+}
+
+class NoteScreen{
++ constructor(navigate: (String) -> Unit ))
+}
+
+class ReminderScreen{
++ constructor(navigate: (String) -> Unit ))
+}
+
+
+NavigationGraph -d-> MainScreen
+
+MainScreen o-d-> MainViewModel
+MainScreen *-d-> TabLayout
+TabLayout *-d-> NoteScreen
+TabLayout *-d-> ReminderScreen
+
+@enduml
+

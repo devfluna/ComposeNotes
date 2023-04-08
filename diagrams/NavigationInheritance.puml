@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+title Navigation: With Inheritance (Alternate proposal)
+
+class NavigationGraph {
++ navController
+}
+
+class MainScreen{
++ constructor(navController: NavController)
++ onNavigationChange: State<String> // Listens to a live data on the ViewModel
+}
+note "Listen to any change in ViewModels navigationRequest\nUses navController to navigate" as N1
+
+abstract MainViewModel {
++ navitgationRequest: StateFlow<String>
+# updateNavState(route: String) // Updates a LiveData
+}
+
+class ScreenVM extends MainViewModel{
++ goTo(screen: String) // Calls parent's updateNavState
+}
+
+class ReminderVM extends MainViewModel{
++ goTo(screen: String) // Calls parent's updateNavState
+}
+
+
+NavigationGraph -d-> MainScreen
+
+N1 -L- MainScreen
+MainScreen o-d-> MainViewModel
+MainScreen *-d-> TabLayout
+TabLayout *-d-> NoteScreen
+TabLayout *-d-> ReminderScreen
+NoteScreen -d-> ScreenVM
+ReminderScreen -d-> ReminderVM
+@enduml
