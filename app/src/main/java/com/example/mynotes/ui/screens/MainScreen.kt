@@ -6,11 +6,14 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.example.mynotes.ui.navigation.Screen
 import com.example.mynotes.ui.screens.components.SwipeTabLayout
+import kotlinx.coroutines.flow.StateFlow
 
 @Composable
 fun MainScreen(
-    onAddButtonTap: () -> Unit,
+    currentTab: StateFlow<Int>,
+    navigateToRoute: (String) -> Unit,
     onTabSwipeOrTap: (Int) -> Unit
 ) {
     Surface(
@@ -19,7 +22,9 @@ fun MainScreen(
     ) {
         Scaffold(
             floatingActionButton = {
-                FloatingAddButton(onAddButtonTap = onAddButtonTap )
+                FloatingAddButton(onAddButtonTap = {
+                    if (currentTab.value == 0) navigateToRoute(Screen.AddNoteScreen.route)
+                })
             }
         ) {
             SwipeTabLayout(onSwipeOrClicked = onTabSwipeOrTap)
